@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PulseTV — Официальный сайт</title>
     <style>
-        /* ОСНОВНЫЕ СТИЛИ САЙТА */
         body { 
             background-color: #0e0e10; 
             color: #efeff1; 
@@ -14,7 +13,6 @@
             overflow-x: hidden;
         }
 
-        /* ШАПКА САЙТА */
         header { 
             background-color: #ff0000; 
             padding: 35px 10px; 
@@ -32,7 +30,6 @@
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
 
-        /* --- АНИМИРОВАННЫЙ АВАТАР (PT) --- */
         .avatar-widget {
             position: absolute;
             top: 15px;
@@ -92,7 +89,6 @@
             50% { transform: translateY(-8px) scale(1.05); }
         }
 
-        /* НАВИГАЦИЯ */
         nav { 
             display: flex; 
             justify-content: center; 
@@ -115,7 +111,6 @@
             color: #fff; border-bottom: 4px solid #ff0000; background-color: #1f1f23;
         }
 
-        /* КОНТЕНТ */
         .content { 
             max-width: 1000px; margin: 40px auto; padding: 20px; display: none; 
             animation: fadeIn 0.5s ease;
@@ -132,14 +127,6 @@
             background-color: #1f1f23; padding: 40px; border-radius: 15px;
             text-align: center; border: 2px dashed #444;
         }
-
-        .video-container {
-            position: relative; width: 100%; padding-bottom: 56.25%;
-            background: #000; border-radius: 12px; overflow: hidden; 
-            border: 2px solid #333;
-        }
-
-        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
         .tg-btn {
             background: #0088cc; color: white; padding: 18px 40px;
@@ -164,6 +151,7 @@
         @media (max-width: 700px) {
             .avatar-widget { width: 60px; height: 60px; right: 10px; }
             header h1 { font-size: 2rem; }
+            .tab-btn { padding: 12px 15px; font-size: 0.8rem; }
         }
     </style>
 </head>
@@ -181,7 +169,6 @@
 
 <nav>
     <button class="tab-btn active" onclick="openTab(event, 'main')">Главная</button>
-    <button class="tab-btn" onclick="openTab(event, 'twitch')">Твич</button>
     <button class="tab-btn" onclick="openTab(event, 'youtube')">Ютуб</button>
     <button class="tab-btn" onclick="openTab(event, 'telegram')">Телеграм</button>
     <button class="tab-btn" onclick="openTab(event, 'about')">О нас</button>
@@ -195,33 +182,26 @@
     </div>
 </div>
 
-<div id="twitch" class="content">
-    <h2>Прямой эфир на Twitch</h2>
-    <div class="video-container">
-        <iframe src="https://player.twitch.tv/?channel=pulsetv_yt&parent=pulsetv.github.io" frameborder="0" allowfullscreen="true" scrolling="no"></iframe>
-    </div>
-</div>
-
 <div id="youtube" class="content">
     <div class="info-box">
         <h2 style="color: #ff0000;">PulseTV на YouTube</h2>
-        <p>На YouTube прямых эфиров не будет. Только ролики и архивы!</p>
-        <a href="https://www.youtube.com/@PulseTV_YT" target="_blank" style="color: #ff0000;">Перейти на канал</a>
+        <p>Смотрите наши архивы и эксклюзивные ролики на основном канале.</p>
+        <a href="https://www.youtube.com/@PulseTV_YT" target="_blank" style="color: #ff0000; font-weight: bold; font-size: 1.2rem;">ПЕРЕЙТИ НА КАНАЛ</a>
     </div>
 </div>
 
 <div id="telegram" class="content">
     <div class="info-box" style="border-style: solid; border-color: #0088cc; background: #17212b;">
-        <h2 style="color: #0088cc;">Смотрите в Telegram</h2>
-        <p>Трансляции проходят напрямую в приложении для лучшего качества.</p>
-        <a href="https://t.me/PulseTV_YT" class="tg-btn" target="_blank">ПОДКЛЮЧИТЬСЯ К ЭФИРУ</a>
+        <h2 style="color: #0088cc;">Смотрите эфиры в Telegram</h2>
+        <p>Прямые трансляции проходят именно здесь. Подключайтесь, чтобы ничего не пропустить!</p>
+        <a href="https://t.me/PulseTV_YT" class="tg-btn" target="_blank">ВОЙТИ В ЭФИР</a>
     </div>
 </div>
 
 <div id="about" class="content">
     <div class="info-box">
         <h2>О телеканале PulseTV</h2>
-        <p>PulseTV — это современный медиа-проект, объединяющий стриминг на разных платформах и качественный контент для зрителей.</p>
+        <p>PulseTV — это современный проект, созданный для качественных стримов и общения. Мы развиваемся и стараемся делать контент лучше с каждым днем.</p>
     </div>
 </div>
 
@@ -229,9 +209,9 @@
     <h2>Наши официальные ресурсы</h2>
     <div class="social-grid">
         <a href="https://www.youtube.com/@PulseTV_YT" target="_blank" class="social-card"><h3>YouTube</h3><p>Архив видео</p></a>
-        <a href="https://t.me/PulseTV_YT" target="_blank" class="social-card"><h3>Telegram</h3><p>Новости</p></a>
-        <a href="https://www.twitch.tv/pulsetv_yt" target="_blank" class="social-card"><h3>Twitch</h3><p>Стримы</p></a>
-        <a href="https://t.me/Bend335" target="_blank" class="social-card"><h3>Владелец</h3><p>Связь</p></a>
+        <a href="https://t.me/PulseTV_YT" target="_blank" class="social-card"><h3>Telegram</h3><p>Анонсы и чат</p></a>
+        <a href="https://www.twitch.tv/pulsetv_yt" target="_blank" class="social-card"><h3>Twitch</h3><p>Запасная площадка</p></a>
+        <a href="https://t.me/Bend335" target="_blank" class="social-card"><h3>Владелец</h3><p>Сотрудничество</p></a>
     </div>
 </div>
 
